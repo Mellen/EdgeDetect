@@ -68,8 +68,6 @@ function capture()
 
 	var stripScore = calcStripScore(patientCMYK, patient.width, patient.height);
 
-	console.log(stripScore);
-
 	ctx.strokeStyle = '#ff0000';
 	ctx.strokeRect(patientDimensions.x, patientDimensions.y, patientDimensions.width, patientDimensions.height)
 
@@ -151,8 +149,6 @@ function calcStripScore(pixels, width, height)
 	bestBlack.signal += pixels[pi + 3];
 	signalCount++;
     }
-
-    console.log('signal: ' + bestBlack.signal + ' count: ' + signalCount);
 
     bestBlack.signal = bestBlack.signal / signalCount;
 
